@@ -1,0 +1,16 @@
+#!/bin/bash
+rm -rf /usr/share/nginx/html/index.*
+echo $'<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NGINX</title>
+	<style>.rcorners { border-radius: 25px; background: lightgray; width: 500px; margin: 80px auto 0 auto; padding:75px 100px 75px 100px; height: 150px; }
+	h1,p {font-family:Arial, Helvetica, sans-serif;}</style>
+  </head>
+  <body>
+      <div class="rcorners">
+        <h1>centos-nginx</h1><p>Congratulations, you\'ve successfully deployed the camw/centos-nginx image as container $HOSTNAME.</p><p><a href="test.php">[Test PHP]</a></p>
+      </div>
+  </body>
+</html>' >> /usr/share/nginx/html/index.html
+echo $'<?php phpinfo(); ?>' >> /usr/share/nginx/html/test.php

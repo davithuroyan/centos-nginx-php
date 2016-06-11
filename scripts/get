@@ -1,0 +1,12 @@
+#!/bin/bash
+function clone {
+  git clone $1 /root/app
+}\n\
+if (( $# != 1 ))
+then
+  echo "Usage: get [GIT REPO PATH]"
+  exit 1
+fi
+if clone $1; then
+  /root/app/scripts/publish.sh
+fi
