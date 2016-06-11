@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -rf /usr/share/nginx/html/index.*
-echo $'<!DOCTYPE html>
+echo $"<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>NGINX</title>
@@ -8,9 +8,9 @@ echo $'<!DOCTYPE html>
 	h1,p {font-family:Arial, Helvetica, sans-serif;}</style>
   </head>
   <body>
-      <div class="rcorners">
-        <h1>centos-nginx</h1><p>Congratulations, you\'ve successfully deployed the camw/centos-nginx image as container $HOSTNAME.</p><p><a href="test.php">[Test PHP]</a></p>
+      <div class=\"rcorners\">
+        <h1>centos-nginx-php</h1><p>Congratulations, you've successfully deployed the camw/centos-nginx-php image as container $HOSTNAME.</p><p><a href=\"test.php\">[Test PHP]</a></p>
       </div>
   </body>
-</html>' >> /usr/share/nginx/html/index.html
+</html>" >> /usr/share/nginx/html/index.html
 echo $'<?php phpinfo(); ?>' >> /usr/share/nginx/html/test.php
