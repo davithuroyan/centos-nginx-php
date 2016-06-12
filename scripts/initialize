@@ -9,8 +9,7 @@ echo $"<!DOCTYPE html>
   </head>
   <body>
       <div class=\"rcorners\">
-        <h1>centos-nginx-php</h1><p>Congratulations, you've successfully deployed the camw/centos-nginx-php image as a container.</p><p><a href=\"test.php\">[Test PHP]</a></p>
+        <h1>centos-nginx-php</h1><p>Congratulations, you've successfully deployed the camw/centos-nginx-php image as a container.</p>
       </div>
   </body>
 </html>" >> /usr/share/nginx/html/index.html
-echo $'<?php phpinfo(); ?>' >> /usr/share/nginx/html/test.php
