@@ -8,7 +8,7 @@ ENV PATH /root/scripts:$PATH
 EXPOSE 80 443
 RUN yum -y update && \
     yum -y install epel-release && \
-    yum -y install nginx php php-fpm git logrotate && \
+    yum -y install nginx php php-fpm git logrotate npm && \
     yum clean all && \
     sed -i '/;cgi.fix_pathinfo=1/c\cgi.fix_pathinfo=0' /etc/php.ini && \
     sed -i '/listen = 127.0.0.1:9000/c\listen = /var/run/php-fpm/php-fpm.sock' /etc/php-fpm.d/www.conf && \
